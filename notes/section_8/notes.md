@@ -85,3 +85,33 @@ Comparision result (not equals) : false
 ```
 
 This may be surprising that the two floats are equal but this is due the computer representation of the numbers.
+
+## Relational Operators
+```
+> greater than
+>= greater than or equal to
+< less than
+<= less than or equal to
+<=> three-way comparison (C++20)
+```
+
+## Logical Operators
+| Operator   | Meaning     |
+|---         | ---         |
+| not / !    | negation    |
+| and / &&   | logical and |
+| or / \|\|  | logical or  |
+
+### Precedence
+* `not` has higher precedence than `and`
+* `and` has higher precedence than `or`
+* `not` is a unary operator
+* `and` and `or` are binary operators
+
+### Short circuit evaluation
+* When evaluating a logical expression C++ stops as soon as the result is known
+
+```cpp
+expr1 && expr2 && expr3 // if expr1 false, then no need to evaluate others
+expr1 || expr2 || expr3 // if any of the exprs are true, then all is true
+```
