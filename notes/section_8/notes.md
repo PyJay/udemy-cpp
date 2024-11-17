@@ -115,3 +115,27 @@ This may be surprising that the two floats are equal but this is due the compute
 expr1 && expr2 && expr3 // if expr1 false, then no need to evaluate others
 expr1 || expr2 || expr3 // if any of the exprs are true, then all is true
 ```
+
+## Compound Assignment Operators
+`+=` `/-` `*=` `-=`
+
+## Operator Precedence
+
+`()` is on the top row, `=` is on the bottom row
+
+What is associativity?
+* Use precedence rules when adjacent operators are different
+  
+  `expr1 op1 expr2 op2 expr3 // precedence`
+
+* Use associativy rules when adjacent operators have the same precedence
+
+`expr1 op1 expr2 op1 expr3 // associativity`
+
+
+## Quiz
+* The prefix increment operator means, increment first then return the incremented value
+* `==` is the operator that checks for equality
+* The operator that represents logical AND is `&&`
+* The operator that represents logical OR is `||`
+* `a < 10` is called a relational operator
