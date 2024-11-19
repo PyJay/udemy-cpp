@@ -1,4 +1,4 @@
-## Section 8
+# Section 8
 
 ## Increment and decrement operators
 
@@ -14,15 +14,15 @@
 * Don't overuse this operator!
 * **ALERT!!!** Never use it twice for the same variable in the same statement!! Behaviour is undefined.
 
-
 * Example 1 - simple increment
-    * `counter++`
+  * `counter++`
 
-    * `++counter`
+  * `++counter`
 
-    * Has the same effect, the operand (counter) is incremented by 1.
+  * Has the same effect, the operand (counter) is incremented by 1.
 
 * Example 2 - preincrement
+
 ```cpp
 counter = 10;
 result = 0;
@@ -31,7 +31,8 @@ result = ++counter; // Note the pre increment
 cout << "Counter:" << counter << endl; // counter will be 11
 cout << "Result:" << result << endl; // result will be 11
 ```
-# Mixed Type Expressions
+
+## Mixed Type Expressions
 
 ## Conversions
 
@@ -87,7 +88,8 @@ Comparision result (not equals) : false
 This may be surprising that the two floats are equal but this is due the computer representation of the numbers.
 
 ## Relational Operators
-```
+
+```txt
 > greater than
 >= greater than or equal to
 < less than
@@ -96,6 +98,7 @@ This may be surprising that the two floats are equal but this is due the compute
 ```
 
 ## Logical Operators
+
 | Operator   | Meaning     |
 |---         | ---         |
 | not / !    | negation    |
@@ -103,12 +106,14 @@ This may be surprising that the two floats are equal but this is due the compute
 | or / \|\|  | logical or  |
 
 ### Precedence
+
 * `not` has higher precedence than `and`
 * `and` has higher precedence than `or`
 * `not` is a unary operator
 * `and` and `or` are binary operators
 
 ### Short circuit evaluation
+
 * When evaluating a logical expression C++ stops as soon as the result is known
 
 ```cpp
@@ -117,6 +122,7 @@ expr1 || expr2 || expr3 // if any of the exprs are true, then all is true
 ```
 
 ## Compound Assignment Operators
+
 `+=` `/-` `*=` `-=`
 
 ## Operator Precedence
@@ -124,6 +130,7 @@ expr1 || expr2 || expr3 // if any of the exprs are true, then all is true
 `()` is on the top row, `=` is on the bottom row
 
 What is associativity?
+
 * Use precedence rules when adjacent operators are different
   
   `expr1 op1 expr2 op2 expr3 // precedence`
@@ -132,8 +139,8 @@ What is associativity?
 
 `expr1 op1 expr2 op1 expr3 // associativity`
 
-
 ## Quiz
+
 * The prefix increment operator means, increment first then return the incremented value
 * `==` is the operator that checks for equality
 * The operator that represents logical AND is `&&`
