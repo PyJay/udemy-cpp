@@ -27,8 +27,18 @@ int main() {
             break;
         case 'f': 
         case 'F': 
-            cout << "XXXX" << endl;
+        { // the curly braces are needed as we declare a variable.
+            char confirm {};
+            cout << "Are you sure (Y/N)?";
+            cin>> confirm;
+            if (confirm == 'y' || confirm == 'Y')
+                cout << "OK, I guess you didn't study..." << endl;
+            else if (confirm == 'n' || confirm == 'N')
+                cout << "Good - go study!" << endl;
+            else 
+                cout << "Illegal choice" << endl;
             break;
+        }
         default:
             cout << "Sorry, not a valid grade" << endl;
 
