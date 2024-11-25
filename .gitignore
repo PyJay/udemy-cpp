@@ -32,3 +32,7 @@
 *.app
 
 .vscode/
+
+# CPP Compilation artefacts
+*.pdb
+*.ilk
