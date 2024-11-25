@@ -123,3 +123,53 @@ switch (screen_color) {
 
 * Best practice - provide break statment for each case.
 * Best practice - `default` is optional, but should be handled.
+
+
+### Conditional Operator
+?:
+
+`(cond_expr) ? expr1: expr2`
+
+* cond_expr evaluates to a boolean expression
+  * If cond_expr is true then the value of expr1 is returned
+  * If cond_expr is false then the value of expr2 is returned
+* Similar to if-else construct
+* Ternary operator
+* Very useful when used inline
+* Very easy to abuse! Best practice: don't nest conditions inside the operator.
+
+### Looping
+iteration
+
+* The third basic building block of programming
+  * sequence, selection, *iteration*
+* Iteration or repetition
+* Allows the execution of a statement or block of statements repeatedly
+* Loops are made up of a loop condition and the body which contains the statements to repeat.
+
+Some typical use cases
+
+Execute a loop:
+* A specific number of times
+* For each element in a collection
+* While a specific condition remains true
+* until we reach the end of some input stream
+* forever
+* etc
+
+### C++ Looping Constructs
+* `for` loop
+  * Iterate a specific number of times
+
+* `Range-based for` loop
+  * one iteration for each element in a range or collection
+
+* `while` loop
+  * iterate while a condition remains true
+  * stop when the condition becomes false
+  * _check the condition at the beginning of every iteration_
+
+* `do-while` loop
+  * iterate while a condition remains true
+  * stop when the cnodition becomes false
+  * _check the condition at the end of every iteration_
