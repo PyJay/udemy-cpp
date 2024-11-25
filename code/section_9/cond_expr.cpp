@@ -34,14 +34,3 @@ int main() {
     // cout  << endl;
     return 0;
 }
-
-
-
-
-
-
-
-
-
-    //     cout << "Largest: " << ( (num1 > num2) ? num1 : num2 ) << endl;
-    //     cout << "Smallest: " << ( (num1 < num2) ? num1 : num2) << endl;
