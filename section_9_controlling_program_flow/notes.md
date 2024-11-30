@@ -173,3 +173,19 @@ Execute a loop:
   * iterate while a condition remains true
   * stop when the cnodition becomes false
   * _check the condition at the end of every iteration_
+
+
+## Range-based for loop
+```cpp
+int scores [] {100, 90, 97};
+
+for (int score: scores)
+  cout << score << endl;
+```
+output:
+100
+90
+97
+
+* you can use the `auto` keyword instead of specifying a type (e.g. `int` in above example)
+* 
