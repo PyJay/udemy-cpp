@@ -188,4 +188,83 @@ output:
 97
 
 * you can use the `auto` keyword instead of specifying a type (e.g. `int` in above example)
-* 
+
+
+## `while` Loop
+
+```cpp
+while (expression)
+  statement;
+
+while (expression) {
+  statement(s);
+}
+```
+
+```cpp
+int i {1};
+
+while (i <= 5) {
+  cout << i << endl;
+  ++i; // important! otherwise you would end up with an infinite loop
+}
+```
+
+
+```cpp
+int i {1};
+
+while (i <= 10) {
+  if (i % 2 == 0)
+    cout << i << endl;
+  ++i;
+}
+```
+
+```cpp
+int scores [] {100, 90, 87};
+int i {0};
+
+while (i < 3) {
+  cout << scores[i] << endl;
+  ++i;
+}
+```
+
+* while loops are used for input validation
+
+```cpp
+int number {};
+
+cout << "Enter an integer less than 100: ";
+cin >> number;
+
+while (number >= 100) {
+  cout << "Enter an integer less than 100"; // note: there is a couple of lines of duplication here
+  cin >> number;
+}
+
+
+cout << "Thanks" << endl;
+```
+
+* input validation - boolean flag
+
+```cpp
+bool done {false};
+int number {0};
+
+while (!done) {
+  cout << "Enter an integer between 1 and 5: "; // no code duplication!
+  cin >> number;
+  if (number <= 1 || number >= 5)
+    cout << "Out of range, try again" << endl;
+  else {
+    cout << "Thanks!" << endl;
+    done = true;
+  }
+}
+```
+
+
+
