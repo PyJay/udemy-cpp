@@ -266,5 +266,43 @@ while (!done) {
 }
 ```
 
+## `do-while` Loop
+
+```cpp
+do {
+  statements;
+} while (expression);
+```
+* do statement, then while statement, do while loop is a "post test" loop. 
+* Also means that the loop body will be executed at least once - very handy as you don't need to force yourself into the loop like you had to for the while loop 
+* input validation example
+
+```cpp
+int number {};
+do {
+  cout << "Enter an integer between 1 and 5: ";
+  cin >> number;
+} while (number <= 1 || number >= 5);
+cout << "Thanks" << endl;
+```
+
+* area calculation with calculate another
+  
+```cpp
+char selection {}
+do {
+  double width{}, height{};
+  cout << "Enter width and height separated by a space: ";
+  cin >> width >> height;
+
+  double area {width * height};
+  cout << "The area is " << area << endl;
+
+  cout << "Calculate another? (Y/N): ";
+  cin >> selection;
+} while (selection == 'Y' || selection == 'y');
+cout << "Thanks!" << endl;
+```
+
 
 
