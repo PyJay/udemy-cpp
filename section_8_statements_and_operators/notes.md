@@ -146,3 +146,40 @@ What is associativity?
 * The operator that represents logical AND is `&&`
 * The operator that represents logical OR is `||`
 * `a < 10` is called a relational operator
+
+## `Continue` and `break` statements
+* `continue`
+  * no further statements in the body of the loop are executed
+  * control immediately goes directly to the beginning of the loop for the next iteration
+* `break` 
+  * no further statements in the body of the loop are executed
+  * loop is immediately terminated
+  * Control immediately goes to the statement following the loop construct
+  
+```cpp
+vector<int> values {1, 2, -1, 3, -1, -99, 7, 8, 10};
+
+for (auto val: values) {
+  if (val == 99)
+    break;
+  else if (val == 1)
+    continue;
+  else
+    cout << val << endl;
+}
+1
+2
+3
+```
+
+## Nested loops
+* Multiplication Table
+
+```cpp
+for (int num1{1}; num1 <= 10; ++num1) { // outer
+  for (int num2 {1}; num2 <=10; ++num2) { // inner
+    cout << num1 << " * " << num2
+      << " = " << num1 * num2 << endl;  
+  }
+}
+```
