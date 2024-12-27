@@ -107,11 +107,11 @@ void main(){
         If the list is empty you should display, "Unable to calculate the mean - no data"
         */
         {
-            double mean{0};
-            int total{0};
             if (nums.empty()) 
                 cout << "Unable to calculate the mean - no data";
             else {
+                double mean{0};
+                int total{0};
                 for (auto _n: nums) 
                 {
                     total += _n;
@@ -123,7 +123,27 @@ void main(){
         break;
     case 'S':
     case 's':
-        /* code */
+        /* If the user enters 'S' or 's' you should display the smallest element in the list.
+           For example, if the list contains [2 4 5 1],  you should display, "The smallest number is 1"
+           If the list is empty you should display, "Unable to determine the smallest number - list is empty"
+        */
+        {
+            if (nums.empty()) 
+                cout << "Unable to determine the smallest number - list is empty";
+            else {
+                int smallest{0};
+                for (int idx=0; idx < nums.size(); idx++){
+                    if (idx==0)
+                        smallest = nums[idx];
+                    else if (nums[idx] < smallest)
+                        {
+                            smallest = nums[idx];
+                        };
+                    };
+                cout << "The smallest number is " << smallest;
+                }
+            }       
+
         break;
     case 'L':
     case 'l':
