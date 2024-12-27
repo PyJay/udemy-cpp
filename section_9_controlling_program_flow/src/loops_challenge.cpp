@@ -67,9 +67,9 @@ Good luck!
 using namespace std;
 void main(){
     char c{};
+    vector<int> nums{};
     do
     {
-    vector<int> nums{};
     cout << "\nPick an option from these:" << "\n" << "P - Print numbers" << "\n"
     << "A - Add a number" << "\n"
     << "M - Display mean of the numbers" << "\n"
@@ -90,9 +90,36 @@ void main(){
             cout << "]";
         };
         break;
+    case 'A':
+    case 'a':
+    {
+        int num{0};
+        cout << "Input an integer to add to the list:\n";
+        cin >> num;
+        nums.emplace_back(num);
+        cout << num << " added";
+    }
+    break;
     case 'M':
     case 'm':
-        /* code */
+        /*
+        If the user enters 'M' or 'm'  you should calculate the mean or average of the elements in the list and display it.
+        If the list is empty you should display, "Unable to calculate the mean - no data"
+        */
+        {
+            double mean{0};
+            int total{0};
+            if (nums.empty()) 
+                cout << "Unable to calculate the mean - no data";
+            else {
+                for (auto _n: nums) 
+                {
+                    total += _n;
+                };
+                mean = total/nums.size();
+                cout << "The mean is " << mean;
+            }
+        }       
         break;
     case 'S':
     case 's':
