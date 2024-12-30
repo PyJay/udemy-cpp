@@ -70,7 +70,8 @@ void main(){
     vector<int> nums{};
     do
     {
-    cout << "\n\nPick an option from these:" << "\n" << "P - Print numbers" << "\n"
+    cout << "\n\nPick an option from these:" << "\n" 
+    << "P - Print numbers" << "\n"
     << "A - Add a number" << "\n"
     << "M - Display mean of the numbers" << "\n"
     << "S - Display the smallest number" << "\n"
