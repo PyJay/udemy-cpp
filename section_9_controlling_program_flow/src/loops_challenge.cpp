@@ -134,14 +134,10 @@ void main(){
             if (nums.empty()) 
                 cout << "Unable to determine the smallest number - list is empty";
             else {
-                int smallest{0};
-                for (int idx=0; idx < nums.size(); idx++){
-                    if (idx==0)
-                        smallest = nums[idx];
-                    else if (nums[idx] < smallest)
-                        {
-                            smallest = nums[idx];
-                        };
+                int smallest{nums.at(0)};
+                for (int num: nums){
+                    if (num < smallest)
+                        smallest = num;
                     };
                 cout << "The smallest number is " << smallest;
                 }
@@ -158,14 +154,10 @@ void main(){
             if (nums.empty()) 
                 cout << "Unable to determine the largest number - list is empty";
             else {
-                int largest{0};
-                for (int idx=0; idx < nums.size(); idx++){
-                    if (idx==0)
-                        largest = nums[idx];
-                    else if (nums[idx] > largest)
-                        {
-                            largest = nums[idx];
-                        };
+                int largest{nums.at(0)};
+                for (int num: nums){
+                    if (num > largest)
+                        largest = num;
                     };
                 cout << "The largest number is " << largest;
                 }
