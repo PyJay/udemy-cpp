@@ -1,6 +1,7 @@
 # Functions
 
 ## Section Overview
+
 * Function
   * definition
   * prototype - make funcs useful anywhere in code
@@ -15,9 +16,10 @@
   * recursive functions - funcs that call themselves
 
 ## What is a function?
+
 * C++ programs
 * C++ Standard Libraries (funcs and classes)
-* Third-party libraries (funcs and classes) 
+* Third-party libraries (funcs and classes)
 * Our own funcs and classes
 
 * Functions allow the modularization of a program
@@ -25,6 +27,7 @@
   * These units can be reused
 
 * Instead of
+
 ```cpp
 int main() {
   // read input
@@ -45,7 +48,9 @@ int main() {
     return 0;
 }
 ```
+
 * We write modularized code
+
 ```cpp
 int main() {
   // read input
@@ -60,9 +65,11 @@ int main() {
   return 0;
 }
 ```
+
 * more modular, more readable, more maintainable, easier to debug, easier to reuse.
 
-## What is a function?
+## What is a function part 2?
+
 * allows abstraction
 Boss/Worker analogy
 * Write your code to the function specification
@@ -78,6 +85,7 @@ Boss/Worker analogy
 * Example `<cmath>`
 * Common mathematical calculations
 * Global functions called as:
+
 ```cpp
 function_name(argument);
 function_name(argument1, argument2, ...);
@@ -97,3 +105,37 @@ result = pow(2.0, 3.0); // 2.0^3.0
     * numbers themselves are random
     * but sequence they are created in is not.
   * to create more random numbers seed the random num generator with different seed each time
+
+## Defining functions
+
+* name
+  * the name of the function
+  * same rules as for variables
+  * should be meaningful
+  * usually a verb or verb phrase
+
+* parameter list
+  * the variables passed into the function
+  * their types must be specified
+
+* return type
+  * the type of the data that is returned from the function
+
+* body
+  * the statements that are executed when the function is called
+  * in curly braces `{}`
+
+* Example with multiple parameters
+
+```cpp
+void function_name(int a, std::string b)
+{
+  statement(s);
+  return; //optional
+}
+```
+
+## Calling functions
+
+* Functions can call other functions
+* Compiler must know the function details **BEFORE** it is called!
