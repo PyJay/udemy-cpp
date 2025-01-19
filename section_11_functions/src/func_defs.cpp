@@ -17,7 +17,7 @@ void area_circle(){
 
 
 double calc_volume_cylinder(double radius, double height) {
-    return pi * radius * radius * height;
+    return calc_area_circle(radius) * height;
 }
 
 
