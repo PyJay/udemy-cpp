@@ -2,7 +2,19 @@
 
 using namespace std;
 
+// Function prototypes
+double calc_volume_cylinder(double radius, double height);
+double calc_area_circle(double);
+void area_circle();
+void volume_cylinder();
+
 const double pi{3.14159};
+
+int main(){
+    area_circle();
+    volume_cylinder();
+    return 0;
+}
 
 double calc_area_circle(double radius){
     return pi * radius * radius;
@@ -31,9 +43,3 @@ void volume_cylinder(){
     cout << "The volume of a cylinder with radius " << radius << " and height " << height << " is " << calc_volume_cylinder(radius, height) << endl;
 }
 
-
-int main(){
-    area_circle();
-    volume_cylinder();
-    return 0;
-}
