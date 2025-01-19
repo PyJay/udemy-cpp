@@ -139,3 +139,48 @@ void function_name(int a, std::string b)
 
 * Functions can call other functions
 * Compiler must know the function details **BEFORE** it is called!
+  * define funcs before calling them
+    * OK for small programs
+    * Not a practical solution for larger programs
+
+  * Use function prototypes
+    * Tells the compiler what it needs to know without a full func def
+    * Also called forward declarations
+    * Placed at the beginning of the program
+    * Also used in our own header files (.h) - more about this later
+
+```cpp
+int function_name(); // prototype
+
+int function_name()
+{
+  statements(s);
+  return 0;
+}
+```
+* you can have as many prototypes as you need (one per function) 
+* the order doesn't matter
+  
+```cpp
+int function_name(int); // prototype
+                        // or
+int function_name(int a); // prototype
+
+int function_name(int a){
+  statement(s);
+  return 0;
+}
+```
+* the prototype doesn't care about the param name, just the type.
+
+```cpp
+void function_name(int a, std::string b); //or
+void function_name(int, std::string);
+
+void function_name(int a, std::string b)
+{
+  statements(s);
+  return ; // optional
+}
+
+```
