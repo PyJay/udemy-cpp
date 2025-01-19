@@ -143,11 +143,13 @@ void function_name(int a, std::string b)
     * OK for small programs
     * Not a practical solution for larger programs
 
-  * Use function prototypes
-    * Tells the compiler what it needs to know without a full func def
-    * Also called forward declarations
-    * Placed at the beginning of the program
-    * Also used in our own header files (.h) - more about this later
+## Function protypes
+
+* Use function prototypes
+  * Tells the compiler what it needs to know without a full func def
+  * Also called forward declarations
+  * Placed at the beginning of the program
+  * Also used in our own header files (.h) - more about this later
 
 ```cpp
 int function_name(); // prototype
@@ -183,4 +185,64 @@ void function_name(int a, std::string b)
   return ; // optional
 }
 
+```
+* the prototypes usually go in `.h` files (header files)
+
+* When we call a func, we can pass in data to that func
+* in the func call they are called arguments
+* in the func def they are called params
+* they must match in number, order and in type
+
+```cpp
+int add_numbers(int, int); // prototype
+
+int main() {
+  int result {0};
+  result = add_numbers(100, 200); // call
+  return 0;
+}
+
+int add_numbers(int a, int b){ // definition
+  return a + b;
+}
+```
+```cpp
+void say_hello(std::string name){
+  cout << "Hello " << name << endl;
+}
+
+say_hello("Frank"); // note this is a c-style string, but compiler knows to convert it to std::string (similar to int passed where float expected)
+
+std::string my_dog("Buster");
+say_hello(my_dog);
+```
+
+## Function parameters
+
+### Pass by value
+* When you pass data into a function it is **passed-by-value**
+* A copy of the data is passed to the function
+* Whatever changes you make to the param in the func does NOT affect the arg that was passed in.
+* *Disadvantage: copies can be expensive*
+
+* Formal vs. Actual parameters
+  * Formal params - params defined in the function header
+  * Actual params - the params used in the function call, the args
+
+* The actual params are copied to the formal parameters
+
+```cpp
+void param_test(int formal) { // formal is a copy of actual
+  cout << formal << endl;     // 50
+  formal = 100;               // only changes the local copy
+  cout << formal << endl;     // 100
+}
+
+int main(){
+  int actual {50};
+  cout << actual << endl; //50
+  param_test(actual); // pass in 50 to param_test
+  cout << actual << endl; // 50 - did not change
+  return 0;
+}
 ```
