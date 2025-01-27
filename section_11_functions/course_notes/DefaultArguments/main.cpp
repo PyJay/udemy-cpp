@@ -6,15 +6,18 @@
 
 using namespace std;
 
+// function prototypes
 double calc_cost(double base_cost = 100.0, double tax_rate = 0.06, double shipping = 3.50);
 
-void greeting(string name,  string prefix = "Mr.", string suffix = "");
 
+void greeting(string name, string prefix = "Mr.", string suffix = "");
+
+// function defs
 double calc_cost(double base_cost, double tax_rate, double shipping) {
     return base_cost += (base_cost * tax_rate) + shipping;
 }
 
-void greeting(string name,  string prefix, string suffix) {
+void greeting(string name, string prefix, string suffix) {
     cout << "Hello " << prefix + " " + name + " " + suffix << endl;
 }
 

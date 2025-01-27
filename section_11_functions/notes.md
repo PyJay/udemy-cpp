@@ -246,3 +246,19 @@ int main(){
   return 0;
 }
 ```
+
+### Default arguments
+* they must be in the tail end of the function signature
+* They are defaulted in the function prototype
+```cpp
+double calc_cost(double base_cost, double tax_rate=0.06);
+```
+* if one argument is defaulted, all following args are also defaulted
+
+### Function Overloading
+* We can have funcs that have different param lists that have the same name
+* Abstraction mechanism since we can just think `print` for example
+* A type of **polymorphism**
+  * We can have the same name work with different data types to execute similar behaviour
+* The compiler must be able to tell the functions apart based on the param list and argument supplied
+
