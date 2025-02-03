@@ -261,4 +261,16 @@ double calc_cost(double base_cost, double tax_rate=0.06);
 * A type of **polymorphism**
   * We can have the same name work with different data types to execute similar behaviour
 * The compiler must be able to tell the functions apart based on the param list and argument supplied
+* Return type is not considered by compiler when considering overloaded functions
+```cpp
+int get_value();
+double get_value();
+
+// Error
+
+cout << get_value() << endl; // which one?
+```
+* be careful when setting default params on overloaded functions. If more than one signatures with defaults, compiler error as not sure which to choose
+
+
 
