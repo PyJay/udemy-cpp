@@ -272,5 +272,32 @@ cout << get_value() << endl; // which one?
 ```
 * be careful when setting default params on overloaded functions. If more than one signatures with defaults, compiler error as not sure which to choose
 
+## User Scoping
+
+* `Static scoping` is as you read the code (like in sql), not as complex as other languages which use `Dynamic scoping rules`
+
+### Local or Block Scope
+
+* Identifiers declared in a block {}
+* Function params have block scope
+* Only visible within the block {} where declared
+* Function local vars are only active while the function is executing
+* Local variables are NOT preserved between function calls
+* With nested blocks inner blocks can 'see' out but outer blocks cannot 'see' in
+
+### Static local variables
+* Declared with static qualifier
+ `static int value {10};`
+* Global lifetime
+* Value IS preserved between function calls
+* Only initialzed the first time the function is called
+* Can be quite useful since scope is local but state is maintained like a global; which makes it safer than global vars
+
+### Global scope
+* Identifier declared outside any func or class
+* Visible to all parts of the program after the global identifier has been declared
+* Global constants are OK
+* Best practice - don't use global variables
+
 
 
