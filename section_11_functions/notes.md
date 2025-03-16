@@ -272,5 +272,36 @@ cout << get_value() << endl; // which one?
 ```
 * be careful when setting default params on overloaded functions. If more than one signatures with defaults, compiler error as not sure which to choose
 
+## Passing Arrays To Functions
+* We can pass an array to a func by providing square brackets in the formal param descriptions
+`void print_array(int numbers []);`
+* The array elements are NOT copied
+* Since the array name evals to the location of the array in memory - __this address is what is copied__
+* Func doesn't know how many elems in the array since all it knows is the location of the first elem.
+* So for the above func the size would also need to be passed to the func
+* Since we are passing the loc of the array; the func can modify the actual array
+* use `const` (readonly) to prevent this#
+* location vs value (pass by ref)
 
+## Pass by Reference
+* Sometimes we want to be able to change the actual param from within the func body
+* In order to achieve this we need the location or address of the actual param
+* We saw how this is the effect with array, but what about other var types?
+* We can use reference params to tell the compiler to pass in a reference to the actual param
+* The formal param will now be an alias for the actual param
 
+```cpp
+void scale_number(int &num); // prototype
+
+int main() {
+  int number {1000};
+  scale_number(number);      // call
+  cout << number << endl;    // 100
+  return 0;
+}
+
+void scale_number(int &num) {// definition
+  if (num > 100)
+    num = 100;
+}
+```
