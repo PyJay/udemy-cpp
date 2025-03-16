@@ -305,3 +305,43 @@ void scale_number(int &num) {// definition
     num = 100;
 }
 ```
+## User Scoping
+
+* `Static scoping` is as you read the code (like in sql), not as complex as other languages which use `Dynamic scoping rules`
+
+### Local or Block Scope
+
+* Identifiers declared in a block {}
+* Function params have block scope
+* Only visible within the block {} where declared
+* Function local vars are only active while the function is executing
+* Local variables are NOT preserved between function calls
+* With nested blocks inner blocks can 'see' out but outer blocks cannot 'see' in
+
+### Static local variables
+* Declared with static qualifier
+ `static int value {10};`
+* Global lifetime
+* Value IS preserved between function calls
+* Only initialzed the first time the function is called
+* Can be quite useful since scope is local but state is maintained like a global; which makes it safer than global vars
+
+### Global scope
+* Identifier declared outside any func or class
+* Visible to all parts of the program after the global identifier has been declared
+* Global constants are OK
+* Best practice - don't use global variables
+
+## Function Calls
+* Function use the area in memory `function call stack`
+  * LIFO - Last IN First Out
+  * push and pop
+
+* Stack Frame or Activation Record
+  * Functions must return control of function that called
+   it
+  * When function is called; new activation record and push it on the stack
+  * When func terminates, pop the record and return
+  * Local vars and func params are allocated on the stack
+
+* Stack size is finite - Stack Overflow
