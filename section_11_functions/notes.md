@@ -338,10 +338,42 @@ void scale_number(int &num) {// definition
   * push and pop
 
 * Stack Frame or Activation Record
-  * Functions must return control of function that called
-   it
+  * Functions must return control of function that called it
   * When function is called; new activation record and push it on the stack
   * When func terminates, pop the record and return
   * Local vars and func params are allocated on the stack
 
 * Stack size is finite - Stack Overflow
+* When you pass by reference, the variable stored on a previous stack frame may get updated.
+  
+```
+main: 
+  push space for the return value
+  push space for the params
+  push the return address
+  transfer control to func1 (jump)
+
+func1:
+  push the address of the previous activation record
+  push any register values that will need to be restored before returning to the caller ?
+  perform the code in func1 
+  restore the register values
+  restore the previous activation record (move the stack pointer)
+  store any function result
+  transfer control to the return address (jump)
+main:
+  pop the params
+  pop the return value
+```
+
+## Inline functions
+* Func calls have a certain amount of overhead - including ops on the call stack
+* Sometimes we have simple funcs
+* We can *suggest* to the compiler to compile them 'inline'
+  * avoid function call overhead
+  * generate inline assembly code
+  * faster
+  * could cause code bloat
+* Compilers optimizations are very sophisticated
+  * will likely inline even without your suggestion
+* check `inline.cpp` under `src`
