@@ -299,5 +299,16 @@ cout << get_value() << endl; // which one?
 * Global constants are OK
 * Best practice - don't use global variables
 
+## Function Calls
+* Function use the area in memory `function call stack`
+  * LIFO - Last IN First Out
+  * push and pop
 
+* Stack Frame or Activation Record
+  * Functions must return control of function that called
+   it
+  * When function is called; new activation record and push it on the stack
+  * When func terminates, pop the record and return
+  * Local vars and func params are allocated on the stack
 
+* Stack size is finite - Stack Overflow
