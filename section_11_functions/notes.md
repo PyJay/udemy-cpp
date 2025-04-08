@@ -377,3 +377,54 @@ main:
 * Compilers optimizations are very sophisticated
   * will likely inline even without your suggestion
 * check `inline.cpp` under `src`
+
+
+## Recursive functions
+* A recursive func is a func that calls itself
+  * Either directoly or indirectly through another function
+* Recursive problem solving
+  * Base case
+  * Divide the rest of problem into subproblem and do recursive call
+* There are many **problems** that lend themselves to recursive solutions
+* Mathematic - factorial, Fibonacci, fractals,...
+* Searching and sorting - binary search, search trees, ...
+
+* Example - factorial
+
+```
+0! = 1
+n! = n * (n-1)!
+```
+
+* **Base case**:
+  * factorial(0) = 1
+
+* **Recursive case**:
+  * factorial(n)=n*factorial(n-1)
+  
+* check `factorial.cpp` under `src`
+
+* Example - Fibonacci
+
+```
+Fib(0) = 0;
+Fib(1) = 1;
+Fib(n) = Fib(n-1) + Fib(n-2)
+```
+
+* **Base case**:
+  * Fib(0)= 0
+  * Fib(1)= 1
+
+* **Recursive case**:
+  * Fib(n)=Fib(n-1)+Fib(n-2)
+
+### Important Notes
+* If recursion doesn't eventually stop, you'll have infinite recursion
+* Recursion can be resource intensive
+* Remember the base case(s)
+  * it terminates the recursion
+* Only use recursive solutions when it makes sense
+* Anything that can be done recursively can be done iteratively
+  * Stack overflow error
+
